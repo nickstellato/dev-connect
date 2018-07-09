@@ -15,7 +15,7 @@ const ProfileSchema = new Schema({
   company: {
     type: String
   },
-  wesbite: {
+  website: {
     type: String
   },
   location: {
@@ -74,7 +74,7 @@ const ProfileSchema = new Schema({
         type: String,
         required: true
       },
-      fieldofstudey: {
+      fieldofstudy: {
         type: String,
         required: true
       },
