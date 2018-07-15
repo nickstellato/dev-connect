@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+<<<<<<< HEAD
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
 import classnames from "classnames";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
+=======
+import axios from "axios";
+import classnames from "classnames";
+>>>>>>> b5b1c7ecd5eeaf55ce37e13c7fe74270697876ff
 
 class Register extends Component {
   constructor() {
@@ -40,7 +45,14 @@ class Register extends Component {
       password2: this.state.password2
     };
 
+<<<<<<< HEAD
     this.props.registerUser(newUser, this.props.history);
+=======
+    axios
+      .post("/api/users/register", newUser)
+      .then(res => console.log(res.data))
+      .catch(err => this.setState({ errors: err.response.data }));
+>>>>>>> b5b1c7ecd5eeaf55ce37e13c7fe74270697876ff
   }
 
   render() {
